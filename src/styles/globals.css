@@ -1,0 +1,45 @@
+@import 'tailwindcss';
+
+
+@theme {
+  --color-background-color: #111828;        /* Dark background */
+  --color-surface: #111827;   /* Slightly lighter surface (cards/sections) */
+  --color-text: #f8fafc;      /* Main text */
+  --color-subtle: #9ca3af;    /* Subtle/secondary text */
+  --color-accent: #c6d4f1;    /* Accent blue */
+  --color-accent-hover: #1e40af; /* Darker blue on hover ✅ fixed */
+  --color-border: #1f2937;    /* Border gray */
+}
+
+/* 
+.bg-background-color {
+  background-color: var(--background-color);
+}
+
+.bg-surface {
+  background-color: var(--color-surface);
+}
+
+.text-text {
+  color: var(--color-text);
+}
+
+.text-subtle {
+  color: var(--color-subtle);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-accent-hover {
+  color: var(--color-accent-hover);
+}
+
+.border-border {
+  border-color: var(--color-border);
+}
+
+ .hover\:text-accent-hover:hover {
+    color: var(--color-accent-hover);
+  } */
