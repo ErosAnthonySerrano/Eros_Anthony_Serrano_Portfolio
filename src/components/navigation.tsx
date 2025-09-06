@@ -1,21 +1,34 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Navigation() {
+  const pathname = usePathname();
+
+  const links = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/projects", label: "Projects" },
+    { href: "/contact", label: "Contact" },
+  ];
+
   return (
-    <nav className="border-b border-border bg-surface px-6 py-4 flex w-full justify-end">
+    <nav className="sticky top-0 z-50 border-b border-border bg-surface px-6 py-4 flex w-full justify-end">
       <div className="lg:min-w-[60vh] lg:px-12 flex gap-8 lg:gap-12">
-        <Link href="/" className="text-subtle hover:text-accent">
-          Home
-        </Link>
-        <Link href="/about" className="text-subtle hover:text-accent">
-          About
-        </Link>
-        <Link href="/projects" className="text-subtle hover:text-accent">
-          Projects
-        </Link>
-        <Link href="/contact" className="text-subtle hover:text-accent">
-          Contact
-        </Link>
+        {links.map(({ href, label }) => (
+          <Link
+            key={href}
+            href={href}
+            className={`cursor-pointer ${
+              pathname === href
+                ? "text-accent font-semibold"
+                : "text-subtle hover:text-accent"
+            }`}
+          >
+            {label}
+          </Link>
+        ))}
       </div>
     </nav>
   );
