@@ -11,13 +11,16 @@ export default function HomePage() {
     <div className="flex flex-col w-full h-full items-center justify-center pt-10 gap-12 font-mono relative">
       <CircuitBackground intensity="subtle" color="multi" />
       <div className="flex flex-col lg:flex-row items-center gap-20 w-full px-10 lg:px-0 lg:max-w-[60vw]">
-        <Image
-          src="/2.jpg"
-          alt="Profile picture"
-          width={300}
-          height={300}
-          className="rounded-full z-10"
-        />
+        <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-accent-dark">
+          <Image
+            src="/Photo2.png"
+            width={300}
+            height={300}
+            alt="Eros Anthony Serrano"
+            className="w-full h-full object-cover mix-blend-luminosity"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-accent/40 via-transparent to-accent-dark"></div>
+        </div>
         <div className="flex flex-col gap-8">
           {/* Basic Details */}
           <div className="flex flex-col items-start gap-2">
@@ -25,7 +28,9 @@ export default function HomePage() {
               <FaCode className="text-accent-dark w-4 h-4" />
               <span className="text-subtle">Software Engineer</span>
             </div>
-            <span className="text-text text-4xl font-semibold">{"Hello I'm"}</span>
+            <span className="text-text text-4xl font-semibold">
+              {"Hello I'm"}
+            </span>
             <span className="text-accent-hover text-5xl font-bold">
               Eros Anthony Serrano
             </span>
@@ -44,8 +49,12 @@ export default function HomePage() {
 
             {/* Links and Download Button */}
             <div className="flex flex-row items-center justify-between">
-              <a href="/cv-eros-anthony-serrano.pdf" download="CV - Eros Anthony Serrano" className="text-text hover:text-accent-hover border border-subtle rounded-lg px-3 py-1.5 w-max hover:border-accent-hover cursor-pointer flex flex-row items-center gap-2
-               transition-all transform duration-150 active:scale-90 active:shadow-inner">
+              <a
+                href="/cv-eros-anthony-serrano.pdf"
+                download="CV - Eros Anthony Serrano"
+                className="text-text hover:text-accent-hover border border-subtle rounded-lg px-3 py-1.5 w-max hover:border-accent-hover cursor-pointer flex flex-row items-center gap-2
+               transition-all transform duration-150 active:scale-90 active:shadow-inner"
+              >
                 <span>Download CV</span>
                 <FaDownload className="w-4 h-4" />
               </a>

@@ -54,9 +54,9 @@ Location: Naga City, Philippines`,
   };
   const bigWidgetsData = [
     { value: "1+", label: "Year Professional" },
-    { value: "10+", label: "Projects Built" },
-    { value: "2nd", label: "Class Honors" },
-    { value: "15+", label: "Certifications" },
+    { value: "3", label: "Major Projects" },
+    { value: "7+", label: "Technical Skills" },
+    { value: "5", label: "Industry Certifications" },
   ];
 
   const techStack = [
@@ -130,7 +130,7 @@ Location: Naga City, Philippines`,
      
       <div className="relative z-10 flex flex-col gap-6">
           <div className="">
-              <div className="text-lg text-text min-h-[1.5rem]">
+              <div className="text-lg text-subtle min-h-[1.5rem]">
                 {currentText}
                 <span className="animate-pulse text-accent-dark">|</span>
               </div>
