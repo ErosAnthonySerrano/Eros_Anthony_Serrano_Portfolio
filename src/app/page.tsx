@@ -25,7 +25,7 @@ export default function HomePage() {
               <FaCode className="text-accent-dark w-4 h-4" />
               <span className="text-subtle">Software Engineer</span>
             </div>
-            <span className="text-text text-4xl font-semibold">Hello I'm</span>
+            <span className="text-text text-4xl font-semibold">{"Hello I'm"}</span>
             <span className="text-accent-hover text-5xl font-bold">
               Eros Anthony Serrano
             </span>
