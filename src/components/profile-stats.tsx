@@ -125,7 +125,7 @@ Location: Naga City, Philippines`,
   };
 
   return (
-    <div className=" bg-background rounded-2xl relative font-mono border border-border overflow-hidden p-6">
+    <div className=" rounded-2xl relative font-mono border border-border overflow-hidden p-6">
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-subtle via-accent to-accent-dark rounded-2xl animate-pulse"/>
      
       <div className="relative z-10 flex flex-col gap-6">

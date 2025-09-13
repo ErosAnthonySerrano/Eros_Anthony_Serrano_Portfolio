@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import '../styles/globals.css'
 import Navigation from "../components/navigation";
+import CircuitBackground from "../components/circuit-background";
 
 export const metadata: Metadata = {
   title: "My Portfolio",
@@ -19,7 +20,10 @@ export default function RootLayout({
         <Navigation />
         
         {/* Page content */}
-        <main className="flex-grow bg-background-color">{children}</main>
+        <main className="flex-grow bg-gradient-to-r from-black  to-background-color relative py-5">
+          <CircuitBackground intensity="subtle" color="multi" />
+          {children}
+        </main>
         
         {/* Footer */}
         <footer className="bg-surface text-center py-4 text-sm text-accent-hover">
