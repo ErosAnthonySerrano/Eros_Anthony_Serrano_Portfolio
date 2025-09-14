@@ -22,7 +22,7 @@ interface Project {
   outcomes: string[];
 }
 interface projects {
-  projects: any[];
+  projects: Project[];
 }
 
 const MainWidgets: React.FC<projects> = ({ projects }) => {
@@ -34,7 +34,7 @@ const MainWidgets: React.FC<projects> = ({ projects }) => {
     <div className="flex flex-col gap-10 md:gap-20">
         {/* Select Project */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:px-10">
-          {projects.map((item: any) => (
+          {projects.map((item) => (
             <div
               key={item.id}
               onClick={() => handleSelectProject(item)}
@@ -56,8 +56,8 @@ const MainWidgets: React.FC<projects> = ({ projects }) => {
                 <span className="text-text text-lg font-bold">{item.title}</span>
                 <span className="text-subtle">{item.subtitle}</span>
                 <div className="flex flex-wrap gap-2">
-                  {item.techStack.map((item: string) => (
-                    <SmallWidgets name={item} />
+                  {item.techStack.map((item: string, index) => (
+                    <SmallWidgets key={index} name={item} />
                   ))}
                 </div>
               </div>

@@ -43,8 +43,8 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
       <div className="flex flex-col gap-4">
         <span className="text-accent text-lg font-bold">Technology Stack</span>
         <div className="flex flex-wrap gap-2">
-          {project.techStack.map((item: string) => (
-            <SmallWidgets name={item} />
+          {project.techStack.map((item: string, index) => (
+            <SmallWidgets key={index} name={item} />
           ))}
         </div>
       </div>
@@ -54,8 +54,8 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
           Key Features & Implementation
         </span>
         <div className="flex flex-col gap-4">
-          {project.features.map((item: string) => (
-            <div className="flex flex-row items-center gap-4">
+          {project.features.map((item: string, index) => (
+            <div key={index} className="flex flex-row items-center gap-4">
               <div className="w-2 h-2 bg-accent rounded-full" />
               <span className="text-text">{item}</span>
             </div>
@@ -68,8 +68,8 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
           Technical Challenges
         </span>
         <div className="flex flex-col gap-4">
-          {project.challenges.map((item: string) => (
-            <div className="flex flex-row items-center gap-4">
+          {project.challenges.map((item: string, index) => (
+            <div key={index} className="flex flex-row items-center gap-4">
               <div className="w-2 h-2 bg-accent rounded-full" />
               <span className="text-text">{item}</span>
             </div>
@@ -82,8 +82,8 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
           Outcomes & Results
         </span>
         <div className="flex flex-col gap-4">
-          {project.outcomes.map((item: string) => (
-            <div className="flex flex-row items-center gap-4">
+          {project.outcomes.map((item: string, index) => (
+            <div key={index} className="flex flex-row items-center gap-4">
               <div className="w-2 h-2 bg-accent rounded-full" />
               <span className="text-text">{item}</span>
             </div>
