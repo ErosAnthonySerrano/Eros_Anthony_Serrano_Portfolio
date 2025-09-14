@@ -20,13 +20,16 @@ export default function Navigation() {
           <Link
             key={href}
             href={href}
-            className={`cursor-pointer ${
+            className={`cursor-pointer relative ${
               pathname === href
                 ? "text-accent font-semibold"
                 : "text-subtle hover:text-accent"
             }`}
           >
             {label}
+            {pathname === href && (
+              <div className="absolute -bottom-2 left-0 w-full h-0.5 bg-gradient-to-r from-accent to-accent-dark animate-pulse"/>
+            )}
           </Link>
         ))}
       </div>
