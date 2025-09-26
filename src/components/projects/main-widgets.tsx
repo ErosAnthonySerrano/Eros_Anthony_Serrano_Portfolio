@@ -42,7 +42,7 @@ const MainWidgets: React.FC<projects> = ({ projects }) => {
               cursor-pointer ${currentProject.id === item.id ? 'border-accent border-2' : 'border border-border'} shadow-lg shadow-black/40
               transform transition-all duration-500 group ${
                 currentProject.id === item.id 
-                  ? 'scale-105 z-20' : 'scale-100 hover:scale-102'
+                  ? 'scale-102 md:scale-105 z-20' : 'scale-100 hover:scale-102'
               }`}
             >
               <div className="flex flex-col gap-4">

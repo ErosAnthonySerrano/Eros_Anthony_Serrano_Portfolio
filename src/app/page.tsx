@@ -11,7 +11,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col w-full h-full items-center justify-center pt-10 gap-12 font-mono">
       
-      <div className="flex flex-col lg:flex-row items-center gap-20 w-full px-10 lg:max-w-[75vw] lg:px-0 2xl:max-w-[60vw]">
+      <div className="flex flex-col lg:flex-row items-center gap-20 w-full px-5 lg:max-w-[75vw] lg:px-0 2xl:max-w-[60vw]">
         <div className="flex flex-col gap-6 items-center">
           <div className="relative flex-shrink-0 w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 xl:w-[300px] xl:h-[300px]  rounded-full overflow-hidden border-4 border-accent-dark shadow-xl shadow-black/40 z-10">
             <Image
@@ -76,7 +76,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="w-full lg:max-w-[75vw] 2xl:max-w-[60vw] px-10 lg:px-0 mb-6 flex flex-col gap-6">
+      <div className="w-full lg:max-w-[75vw] 2xl:max-w-[60vw] px-5 lg:px-0 mb-6 flex flex-col gap-6">
         <ProfileStats />
         <CommandBox/>
       </div>

@@ -14,7 +14,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="bg-gradient-to-r from-background-color via-background-color  to-surface px-6 py-4 flex w-full justify-end">
+    <nav className="bg-gradient-to-r from-background-color via-background-color  to-surface px-6 py-4 flex w-full justify-center md:justify-end">
       <div className="lg:min-w-[60vh] lg:px-12 flex gap-8 lg:gap-12">
         {links.map(({ href, label }) => (
           <Link
