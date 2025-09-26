@@ -69,7 +69,6 @@ const CommandBox = () => {
           onKeyPress={handleKeyPress}
           placeholder="Try: help, skills, contact, or experience"
           className="border-none outline-none text-accent font-mono text-sm flex-1 placeholder-accent-dark caret-accent"
-          autoFocus// Prevents losing focus
         />
       </div>
 
