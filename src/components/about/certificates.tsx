@@ -37,18 +37,18 @@ const Certificates = () => {
   return (
     <div className='flex flex-col gap-4 w-full z-10'>
       {certificates.map((cert, index) => (
-              <div key={index} className="bg-surface border border-border rounded-2xl p-8">
+              <div key={index} className="bg-gradient-to-b from-surface to-surface-dark shadow-lg shadow-black/40 border border-border rounded-2xl p-8">
                 <div className="flex items-start justify-between mb-4">
-                  <div className={`px-3 py-1 rounded-full text-xs font-medium bg-surface-light text-accent-dark`}>
+                  <div className={`px-3 py-1 rounded-full text-xs font-medium bg-surface border border-accent shadow-lg shadow-black/40 text-shadow-lg text-shadow-black/30 text-accent-dark`}>
                     {cert.type}
                   </div>
-                  <TbCertificate className="w-5 h-5 text-accent " />
+                  <TbCertificate className="w-5 h-5 text-accent drop-shadow-md drop-shadow-black" />
                 </div>
-                <h3 className="font-bold mb-2 text-text">
+                <h3 className="font-bold mb-2 text-text text-shadow-lg text-shadow-black/50">
                   {cert.title}
                 </h3>
-                <p className="text-accent text-sm font-medium mb-1">{cert.issuer}</p>
-                <p className="text-subtle text-sm">{cert.date}</p>
+                <p className="text-accent text-sm font-medium mb-1 text-shadow-lg text-shadow-black/20">{cert.issuer}</p>
+                <p className="text-subtle text-sm text-shadow-lg text-shadow-black/50">{cert.date}</p>
               </div>
             ))}
     </div>

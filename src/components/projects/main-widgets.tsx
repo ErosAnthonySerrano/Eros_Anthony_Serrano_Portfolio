@@ -38,31 +38,31 @@ const MainWidgets: React.FC<projects> = ({ projects }) => {
             <div
               key={item.id}
               onClick={() => handleSelectProject(item)}
-              className={`flex flex-col justify-between p-6  rounded-2xl min-h-[50vh] z-10 bg-gradient-to-r from-black  to-background-color-
-              cursor-pointer ${currentProject.id === item.id ? 'border-accent border-2' : 'border border-border'}
+              className={`flex flex-col justify-between p-6  rounded-2xl min-h-[50vh] z-10 bg-gradient-to-b from-surface  to-surface-dark
+              cursor-pointer ${currentProject.id === item.id ? 'border-accent border-2' : 'border border-border'} shadow-lg shadow-black/40
               transform transition-all duration-500 group ${
                 currentProject.id === item.id 
                   ? 'scale-105 z-20' : 'scale-100 hover:scale-102'
               }`}
             >
               <div className="flex flex-col gap-4">
-                <div className="p-2 bg-surface-light rounded-lg text-accent w-min">
+                <div className="p-2 bg-surface border border-border shadow-lg shadow-black/40 rounded-lg text-accent w-min">
                   {item.category === "professional" ? (
-                    <TfiBag className="w-6 h-6 text-accent" />
+                    <TfiBag className="w-6 h-6 text-accent drop-shadow-md drop-shadow-black" />
                   ) : (
-                    <SlGraduation className="w-6 h-6 text-accent" />
+                    <SlGraduation className="w-6 h-6 text-accent drop-shadow-md drop-shadow-black" />
                   )}
                 </div>
-                <span className="text-text text-lg font-bold">{item.title}</span>
-                <span className="text-subtle">{item.subtitle}</span>
+                <span className="text-text text-lg font-bold text-shadow-lg text-shadow-black/50">{item.title}</span>
+                <span className="text-subtle text-shadow-lg text-shadow-black/50">{item.subtitle}</span>
                 <div className="flex flex-wrap gap-2">
                   {item.techStack.map((item: string, index) => (
                     <SmallWidgets key={index} name={item} />
                   ))}
                 </div>
               </div>
-              <div className="px-3 py-1 text-xs rounded-full bg-surface-light w-min text-subtle flex flex-row items-center gap-2">
-                <div className="w-2 h-2 bg-accent rounded-full" />
+              <div className="px-3 py-1 text-xs rounded-full bg-surface-light shadow-lg shadow-black/40 text-shadow-lg text-shadow-black/50 w-min text-subtle flex flex-row items-center gap-2">
+                <div className="w-2 h-2 bg-accent rounded-full drop-shadow-sm drop-shadow-black" />
                 {item.status}
               </div>
             </div>

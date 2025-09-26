@@ -143,9 +143,9 @@ const Projects = () => {
   return (
     <div className="flex flex-col w-full h-full items-center justify-center pt-10 gap-12 font-mono">
       <div className="flex flex-col gap-10 items-center justify-center p-10 w-full h-full lg:max-w-[75vw] lg:p-0 2xl:max-w-[60vw]">
-        <h1 className="text-4xl md:text-4xl font-bold mb-6 text-text">
+        <h1 className="text-4xl md:text-4xl font-bold mb-6 text-text text-shadow-lg text-shadow-black/30">
           Project
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-dark">
+          <span className="text-accent">
             {" "}
             Laboratory
           </span>

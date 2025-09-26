@@ -20,13 +20,13 @@ export default function RootLayout({
         <Navigation />
         
         {/* Page content */}
-        <main className="flex-grow bg-gradient-to-r from-black  to-background-color relative py-5">
+        <main className="flex-grow bg-gradient-to-r from-background-color via-background-color  to-surface relative py-5">
           <CircuitBackground intensity="subtle" color="multi" />
           {children}
         </main>
         
         {/* Footer */}
-        <footer className="bg-surface text-center py-4 text-sm text-accent-hover">
+        <footer className="bg-gradient-to-r from-background-color via-background-color  to-surface text-center py-4 text-sm text-accent-hover">
           © {new Date().getFullYear()} Eros Anthony Serrano. All rights reserved.
         </footer>
       </body>

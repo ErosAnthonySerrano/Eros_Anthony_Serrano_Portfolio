@@ -2,15 +2,16 @@
 
 
 @theme {
-  --color-background-color: #05161A;        /* Dark background */
---color-surface: #072E33;                 /* Slightly lighter surface (cards/sections) */
---color-surface-light: #0A3D43;          /* Even lighter surface for nested cards/elevated elements */
+  --color-background-color: #151b1f;        /* Dark background */
+--color-surface: #222a32;                 /* Slightly lighter surface (cards/sections) */
+--color-surface-light: #2f3541;          /* Even lighter surface for nested cards/elevated elements */
+--color-surface-dark: #181f25;
 --color-text: #f8fafc;                   /* Main text */
---color-subtle: #6DA5C0;                 /* Subtle/secondary text */
---color-accent: #0F969C;                 /* Accent blue */
---color-accent-dark: #0C7075;            /* Darker blue on hover ✅ fixed */
---color-accent-hover: #0C7075;           /* Darker blue on hover ✅ fixed */
---color-border: #294D61;                 /* Border gray */
+--color-subtle: #bac3cc;                 /* Subtle/secondary text */
+--color-accent: #f85217;                 /* Accent blue */
+--color-accent-dark: #eb571a;            /* Darker blue on hover ✅ fixed */
+--color-accent-hover: #eb571a;           /* Darker blue on hover ✅ fixed */
+--color-border: #2f3541;                 /* Border gray */
 }
 
 

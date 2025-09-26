@@ -11,9 +11,9 @@ const About = () => {
     <div className="flex flex-col w-full h-full items-center justify-center pt-10 gap-12 font-mono">
       <div className="flex flex-col gap-10 items-center justify-center p-10 w-full h-full lg:max-w-[75vw] lg:p-0 2xl:max-w-[60vw]">
         {/* Intro */}
-        <h1 className="text-4xl md:text-4xl font-bold mb-6 text-text">
+        <h1 className="text-4xl md:text-4xl font-bold mb-6 text-text text-shadow-lg text-shadow-black/30">
           Getting to know
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-accent-dark">
+          <span className="text-accent">
             {" "}
             Eros
           </span>
@@ -25,14 +25,14 @@ const About = () => {
         </div>
 
         {/* Expertise */}
-        <h2 className="text-3xl font-bold text-center text-text">
+        <h2 className="text-3xl font-bold text-center text-text text-shadow-lg text-shadow-black/30">
           Technical <span className="text-accent">Expertise</span>
         </h2>
 
         <Expertise />
 
         {/* Achievements */}
-        <h2 className="text-3xl font-bold text-center text-text">
+        <h2 className="text-3xl font-bold text-center text-text text-shadow-lg text-shadow-black/30">
           Key <span className="text-accent">Achievements</span>
         </h2>
 
@@ -40,14 +40,14 @@ const About = () => {
 
         {/* Certifications */}
 
-        <h2 className="text-3xl font-bold text-center text-text">
+        <h2 className="text-3xl font-bold text-center text-text text-shadow-lg text-shadow-black/30">
           Industry <span className="text-accent">Certifications</span>
         </h2>
 
         <Certificates />
 
         {/* Beyond Code */}
-        <h2 className="text-3xl font-bold text-center text-text">
+        <h2 className="text-3xl font-bold text-center text-text text-shadow-lg text-shadow-black/30">
           Beyond <span className="text-accent">Code</span>
         </h2>
         <BeyondCode />
