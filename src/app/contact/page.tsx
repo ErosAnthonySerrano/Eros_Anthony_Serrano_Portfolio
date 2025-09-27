@@ -10,7 +10,7 @@ const Contact = () => {
         {/* Intro */}
         <div className="flex flex-col items-center gap-6 mb-6">
             <h2 className="text-4xl md:text-4xl font-bold text-text text-shadow-lg text-shadow-black/30">
-              Let's
+              {`Let's`}
               <span className="text-accent"> Connect</span>
             </h2>
             <p className="text-subtle text-shadow-lg text-shadow-black/30">
