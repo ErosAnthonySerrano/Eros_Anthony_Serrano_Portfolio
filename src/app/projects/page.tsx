@@ -1,4 +1,5 @@
 "use client";
+import CommandBox from "@/src/components/command";
 import MainWidgets from "@/src/components/projects/main-widgets";
 import React, { useState } from "react";
 
@@ -152,6 +153,9 @@ const Projects = () => {
         </h1>
         <div className="w-full mt-10">
             <MainWidgets projects={projects}/>
+        </div>
+        <div className="flex w-full">
+          <CommandBox/>
         </div>
       </div>
     </div>

@@ -9,11 +9,23 @@
 --color-text: #f8fafc;                   /* Main text */
 --color-subtle: #bac3cc;                 /* Subtle/secondary text */
 --color-accent: #f85217;                 /* Accent blue */
---color-accent-dark: #eb571a;            /* Darker blue on hover ✅ fixed */
+--color-accent-dark: #df4a15;            /* Darker blue on hover ✅ fixed */
+--color-accent-light: #f9632e;
 --color-accent-hover: #eb571a;           /* Darker blue on hover ✅ fixed */
 --color-border: #2f3541;                 /* Border gray */
+--animate-rotate-border: border-rotate 3s linear infinite;
+@keyframes border-rotate {
+  to{
+    --border-angle: 360deg;
+  }
 }
+}
+@property --border-angle{
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
 
+}
 
 
 /* 

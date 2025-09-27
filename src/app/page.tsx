@@ -67,7 +67,7 @@ export default function HomePage() {
                 <div className="border border-border bg-surface shadow-lg shadow-black/30 hover:-translate-y-1 hover:border-accent-hover rounded-full p-2 text-text hover:text-accent-hover cursor-pointer transition-all transform duration-150 active:scale-90 active:shadow-inner">
                   <FaLinkedinIn className="w-4 h-4 drop-shadow-md drop-shadow-black" />
                 </div>
-                <div className="border border-border bg-surface shadow-lg shadow-black/30 hover-translate-y-1 hover:border-accent-hover rounded-full p-2 text-text hover:text-accent-hover cursor-pointer transition-all transform duration-150 active:scale-90 active:shadow-inner">
+                <div className="border border-border bg-surface shadow-lg shadow-black/30 hover:-translate-y-1 hover:border-accent-hover rounded-full p-2 text-text hover:text-accent-hover cursor-pointer transition-all transform duration-150 active:scale-90 active:shadow-inner">
                   <FaGithub className="w-4 h-4 drop-shadow-md drop-shadow-black" />
                 </div>
               </div>

@@ -4,6 +4,7 @@ import Certificates from "@/src/components/about/certificates";
 import Expertise from "@/src/components/about/expertise";
 import MyStory from "@/src/components/about/my-story";
 import PersonalInfo from "@/src/components/about/personal-info";
+import CommandBox from "@/src/components/command";
 import React from "react";
 
 const About = () => {
@@ -51,6 +52,11 @@ const About = () => {
           Beyond <span className="text-accent">Code</span>
         </h2>
         <BeyondCode />
+        
+        {/* Command Box */}
+        <div className="flex w-full">
+          <CommandBox/>
+        </div>
       </div>
     </div>
   );
