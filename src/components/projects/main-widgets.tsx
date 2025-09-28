@@ -48,21 +48,21 @@ const MainWidgets: React.FC<projects> = ({ projects }) => {
               <div className="flex flex-col gap-4">
                 <div className="p-2 bg-surface border border-border shadow-lg shadow-black/40 rounded-lg text-accent w-min">
                   {item.category === "professional" ? (
-                    <TfiBag className="w-6 h-6 text-accent drop-shadow-md drop-shadow-black" />
+                    <TfiBag className="w-6 h-6 text-accent " />
                   ) : (
-                    <SlGraduation className="w-6 h-6 text-accent drop-shadow-md drop-shadow-black" />
+                    <SlGraduation className="w-6 h-6 text-accent " />
                   )}
                 </div>
-                <span className="text-text text-lg font-bold text-shadow-lg text-shadow-black/50">{item.title}</span>
-                <span className="text-subtle text-shadow-lg text-shadow-black/50">{item.subtitle}</span>
+                <span className="text-text text-lg font-bold">{item.title}</span>
+                <span className="text-subtle">{item.subtitle}</span>
                 <div className="flex flex-wrap gap-2">
                   {item.techStack.map((item: string, index) => (
                     <SmallWidgets key={index} name={item} />
                   ))}
                 </div>
               </div>
-              <div className="px-3 py-1 text-xs rounded-full bg-surface-light shadow-lg shadow-black/40 text-shadow-lg text-shadow-black/50 w-min text-subtle flex flex-row items-center gap-2">
-                <div className="w-2 h-2 bg-accent rounded-full drop-shadow-sm drop-shadow-black" />
+              <div className="px-3 py-1 mt-4 text-xs rounded-full bg-surface-light shadow-lg shadow-black/40 w-min text-subtle flex flex-row items-center gap-2">
+                <div className="w-2 h-2 bg-accent rounded-full" />
                 {item.status}
               </div>
             </div>

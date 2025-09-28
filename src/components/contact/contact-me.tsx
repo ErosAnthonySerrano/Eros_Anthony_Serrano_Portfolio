@@ -1,3 +1,4 @@
+import { SlLocationPin } from "react-icons/sl"; 
 import { BsFacebook } from "react-icons/bs"; 
 import { BiMessageRounded } from "react-icons/bi";
 import { CiLocationOn } from "react-icons/ci";
@@ -7,34 +8,34 @@ import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const ContactMe = () => {
   return (
-    <div className="bg-gradient-to-b from-surface to-surface-dark z-10 shadow-lg shadow-black/40 rounded-2xl border border-border p-8 flex flex-col gap-6">
-      <h2 className="text-accent text-shadow-lg text-shadow-black/30 text-2xl font-bold">
+    <div className="bg-gradient-to-b from-surface to-surface-dark z-10 shadow-lg shadow-black/40 rounded-2xl border border-border p-6 flex flex-col gap-6 w-full max-w-full overflow-hidden">
+      <h2 className="text-accent text-2xl font-bold">
         Get in Touch
       </h2>
-      <div className="flex flex-row items-center gap-4">
-        <div className="rounded-full bg-accent shadow-lg shadow-black/30 p-4">
-          <AiOutlineMail className="w-6 h-6 text-text" />
+      <div className="flex flex-row items-center gap-2">
+        <div className="rounded-full bg-accent shadow-lg shadow-black/30 p-2">
+          <AiOutlineMail className="w-5 h-5 text-text " />
         </div>
-        <div className="flex flex-col gap-2">
-          <p className="text-subtle">Email</p>
+        <div className="flex flex-col">
+          <p className="text-subtle text-xs">Email</p>
           <p className="text-text">{`erosanthonyserrano@gmail.com`}</p>
         </div>
       </div>
-      <div className="flex flex-row items-center gap-4">
-        <div className="rounded-full bg-accent shadow-lg shadow-black/30 p-4">
-          <CiLocationOn className="w-6 h-6 text-text" />
+      <div className="flex flex-row items-center gap-2">
+        <div className="rounded-full bg-accent shadow-lg shadow-black/30 p-2">
+          <SlLocationPin className="w-5 h-5 text-text " />
         </div>
         <div className="flex flex-col gap-2">
-          <p className="text-subtle">Location</p>
+          <p className="text-subtle text-xs">Location</p>
           <p className="text-text">{`Calabanga, Camarines Sur, Philippines`}</p>
         </div>
       </div>
-      <div className="flex flex-row items-center gap-4">
-        <div className="rounded-full bg-accent shadow-lg shadow-black/30 p-4">
-          <BiMessageRounded className="w-6 h-6 text-text" />
+      <div className="flex flex-row items-center gap-2">
+        <div className="rounded-full bg-accent shadow-lg shadow-black/30 p-2">
+          <BiMessageRounded className="w-5 h-5 text-text " />
         </div>
         <div className="flex flex-col gap-2">
-          <p className="text-subtle">Response Time</p>
+          <p className="text-subtle text-xs">Response Time</p>
           <p className="text-text">{`Within 24 hours`}</p>
         </div>
       </div>

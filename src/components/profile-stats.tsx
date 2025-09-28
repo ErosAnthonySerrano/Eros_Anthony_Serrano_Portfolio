@@ -79,8 +79,8 @@ const ProfileStats = () => {
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-surface-light via-accent to-accent-dark rounded-2xl animate-pulse" />
 
       <div className="relative z-10 flex flex-col gap-6">
-        <div className="">
-          <div className="text-lg text-subtle min-h-[1.5rem] text-shadow-lg text-shadow-black/50">
+        <div className="h-17">
+          <div className="text-lg text-subtle min-h-[1.5rem]">
             {currentText}
             <span className="animate-pulse text-accent-dark">|</span>
           </div>

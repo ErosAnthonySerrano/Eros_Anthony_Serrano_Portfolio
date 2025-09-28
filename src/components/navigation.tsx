@@ -20,10 +20,10 @@ export default function Navigation() {
           <Link
             key={href}
             href={href}
-            className={`cursor-pointer relative text-shadow-lg ${
+            className={`cursor-pointer relative ${
               pathname === href
-                ? "text-accent font-semibold text-shadow-black/30 "
-                : "text-subtle hover:text-accent text-shadow-black/40 hover:text-shadow-black/30"
+                ? "text-accent font-semibold "
+                : "text-subtle hover:text-accent"
             }`}
           >
             {label}

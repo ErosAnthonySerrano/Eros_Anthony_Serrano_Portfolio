@@ -88,14 +88,14 @@ export default function ContactForm({
   };
 
   return (
-    <div className={`bg-gradient-to-b from-surface to-surface-dark shadow-lg shadow-black/40 font-mono flex flex-col w-full rounded-2xl p-8 border border-border ${className} z-10`}>
-      <h2 className="text-2xl font-bold mb-6 text-text text-shadow-lg text-shadow-black/50">Send a Message</h2>
+    <div className={`bg-gradient-to-b from-surface to-surface-dark shadow-lg shadow-black/40 font-mono flex flex-col w-full rounded-2xl p-6 border border-border ${className} z-10`}>
+      <h2 className="text-2xl font-bold mb-6 text-accent">Send a Message</h2>
       
       <div className="space-y-6">
         {/* Name and Email Row */}
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label className="block text-sm font-medium text-subtle mb-2 text-shadow-lg text-shadow-black/40">
+            <label className="block text-sm font-medium text-subtle mb-2 ">
               Your Name
             </label>
             <input
@@ -103,13 +103,13 @@ export default function ContactForm({
               name="name"
               value={formData.name}
               onChange={handleInputChange}
-              className="w-full bg-surface shadow-lg shadow-black/40  border border-border rounded-lg px-4 py-3 text-text placeholder-subtle focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+              className="w-full bg-surface shadow-lg shadow-black/20  border border-border rounded-lg px-4 py-3 text-text placeholder-subtle focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
               placeholder="John Doe"
             />
           </div>
           
           <div>
-            <label className="block text-sm font-medium text-subtle text-shadow-lg text-shadow-black/40 mb-2">
+            <label className="block text-sm font-medium text-subtle  mb-2">
               Email Address
             </label>
             <input
@@ -117,7 +117,7 @@ export default function ContactForm({
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-              className="w-full bg-surface shadow-lg shadow-black/40 border border-border rounded-lg px-4 py-3 text-text placeholder-subtle focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+              className="w-full bg-surface shadow-lg shadow-black/20 border border-border rounded-lg px-4 py-3 text-text placeholder-subtle focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
               placeholder="john@example.com"
             />
           </div>
@@ -125,7 +125,7 @@ export default function ContactForm({
 
         {/* Subject */}
         <div>
-          <label className="block text-sm font-medium text-subtle text-shadow-lg text-shadow-black/40 mb-2">
+          <label className="block text-sm font-medium text-subtle  mb-2">
             Subject
           </label>
           <input
@@ -133,14 +133,14 @@ export default function ContactForm({
             name="subject"
             value={formData.subject}
             onChange={handleInputChange}
-            className="w-full bg-surface shadow-lg shadow-black/40 border border-border rounded-lg px-4 py-3 text-text placeholder-subtle focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+            className="w-full bg-surface shadow-lg shadow-black/20 border border-border rounded-lg px-4 py-3 text-text placeholder-subtle focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
             placeholder="Project Collaboration"
           />
         </div>
 
         {/* Message */}
         <div>
-          <label className="block text-sm font-medium text-subtle text-shadow-lg text-shadow-black/40 mb-2">
+          <label className="block text-sm font-medium text-subtle  mb-2">
             Message
           </label>
           <textarea
@@ -148,7 +148,7 @@ export default function ContactForm({
             value={formData.message}
             onChange={handleInputChange}
             rows={6}
-            className="w-full bg-surface shadow-lg shadow-black/40 border border-border rounded-lg px-4 py-3 text-text placeholder-subtle focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all resize-none"
+            className="w-full bg-surface shadow-lg shadow-black/20 border border-border rounded-lg px-4 py-3 text-text placeholder-subtle focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all resize-none"
             placeholder="Tell me about your project or just say hello..."
           />
         </div>
@@ -157,7 +157,7 @@ export default function ContactForm({
         <button
           onClick={handleSubmit}
           disabled={isLoading}
-          className="w-full text-shadow-lg text-shadow-black/40 bg-accent-dark hover:bg-accent shadow-lg shadow-black/40 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed text-text font-medium py-4 px-6 rounded-lg transition-all duration-200 flex items-center justify-center space-x-2 group"
+          className="w-full  bg-accent-dark hover:bg-accent shadow-lg shadow-black/20 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed text-text font-medium py-4 px-6 rounded-lg transition-all duration-200 flex items-center justify-center space-x-2 group"
         >
           {isLoading ? (
             <>
@@ -166,7 +166,7 @@ export default function ContactForm({
             </>
           ) : (
             <>
-              <BiSend className="w-5 h-5 group-hover:translate-x-1 transition-transform drop-shadow-md drop-shadow-black" />
+              <BiSend className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               <span>Send Message</span>
             </>
           )}
@@ -174,7 +174,7 @@ export default function ContactForm({
 
         {/* Status Message */}
         {status && (
-          <div className={`p-4 rounded-lg transition-all duration-300 shadow-lg shadow-black/40 flex flex-row items-center justify-between ${status.includes('successfully') 
+          <div className={`p-4 rounded-lg transition-all duration-300 shadow-lg shadow-black/20 flex flex-row items-center justify-between ${status.includes('successfully') 
             ? 'bg-green-900 text-green-300 border border-green-700' 
             : 'bg-red-900 text-red-300 border border-red-700'
           }`}>

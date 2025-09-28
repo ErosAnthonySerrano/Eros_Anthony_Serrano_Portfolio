@@ -8,10 +8,10 @@ const BigWidgets: React.FC<itemProps> = ({value, label}) => {
   return (
     <div className='rounded-2xl bg-surface border border-border flex flex-col text-start gap-2 p-4 transition-all duration-500 transform
     hover:border-accent-dark hover:-translate-y-1 relative group cursor-pointer shadow-lg shadow-black/40'>
-        <div className='text-4xl text-accent font-bold text-shadow-lg text-shadow-black/30'>
+        <div className='text-4xl text-accent font-bold '>
             {value}
         </div>
-        <div className='text-sm text-subtle text-shadow-lg text-shadow-black/50'>
+        <div className='text-sm text-subtle'>
             {label}
         </div>
     </div>

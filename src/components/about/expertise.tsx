@@ -27,14 +27,14 @@ const Expertise = () => {
           key={index}
           className="bg-gradient-to-b from-surface to-surface-dark shadow-lg shadow-black/40 border border-border rounded-2xl p-8 overflow-hidden"
         >
-          <h3 className="text-lg font-semibold mb-4 text-accent text-shadow-lg text-shadow-black/20">
+          <h3 className="text-lg font-semibold mb-4 text-accent">
             {skillCategory.category}
           </h3>
           <div className="space-y-2">
             {skillCategory.items.map((skill, skillIndex) => (
               <div key={skillIndex} className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-accent rounded-full drop-shadow-sm drop-shadow-black"></div>
-                <span className="text-text text-shadow-lg text-shadow-black/50">{skill}</span>
+                <div className="w-2 h-2 bg-accent rounded-full"></div>
+                <span className="text-text">{skill}</span>
               </div>
             ))}
           </div>

@@ -9,11 +9,11 @@ const Contact = () => {
       <div className="flex flex-col gap-10 items-center justify-center p-5 w-full h-full lg:max-w-[75vw] lg:p-0 2xl:max-w-[60vw]">
         {/* Intro */}
         <div className="flex flex-col items-center gap-6 mb-6">
-            <h2 className="text-4xl md:text-4xl font-bold text-text text-shadow-lg text-shadow-black/30">
+            <h2 className="text-4xl md:text-4xl font-bold text-text">
               {`Let's`}
               <span className="text-accent"> Connect</span>
             </h2>
-            <p className="text-subtle text-shadow-lg text-shadow-black/30">
+            <p className="text-subtle px-4 md:px-0">
                 {`Ready to collaborate on your next project? Let's discuss how can we bring your ideas to life.`}
             </p>
         </div>
