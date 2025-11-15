@@ -1,5 +1,7 @@
+import { BiLink } from "react-icons/bi"; 
 import React from "react";
 import SmallWidgets from "../small-widgets";
+import Link from "next/link";
 interface Project {
   id: string;
   title: string;
@@ -26,9 +28,28 @@ const ProjectDetails: React.FC<ProjectDetailsProps> = ({ project }) => {
     <div className="flex flex-col gap-6 w-full bg-gradient-to-b from-surface to-surface-dark shadow-lg shadow-black/40 border border-border p-6 rounded-2xl z-10">
       {/* Status */}
       <div className="flex justify-end w-full">
-        <div className="border border-accent bg-surface-light shadow-lg shadow-black/40 text-accent px-3 py-1 rounded-full flex flex-row items-center gap-2">
-          <div className="w-2 h-2 bg-accent rounded-full" />
-          {project.status}
+        <div className="flex flex-row items-center gap-4">
+          {/* Link */}
+          <div>
+            {project.id === 'secgra' ? (
+              <span className="text-subtle italic text-xs">{"Due to NDA restrictions, project screenshot and public links cannot be shared"}</span>
+            ) : project.id === 'caffeine' ? (
+              <Link href={"https://www.caffeinesolutions.sg/"} target="_blank" className="cursor-pointer rounded-full bg-surface text-subtle hover:text-accent border border-border hover:border-accent shadow-lg shadow-black/40 w-10 h-10 flex items-center justify-center hover:-translate-y-1 transition-all transform duration-150 active:scale-90 active:shadow-inner">
+                <BiLink className="w-6 h-6 drop-shadow-md drop-shadow-black"/>
+              </Link>
+            ) : project.id === 'memorial' ? (
+              <Link href={"https://mpimscapstoneproject.web.app/"} target="_blank" className="cursor-pointer rounded-full bg-surface text-subtle hover:text-accent border border-border hover:border-accent shadow-lg shadow-black/40 w-10 h-10 flex items-center justify-center hover:-translate-y-1 transition-all transform duration-150 active:scale-90 active:shadow-inner">
+                <BiLink className="w-6 h-6 drop-shadow-md drop-shadow-black"/>
+              </Link>
+            ) : (
+              <div></div>
+            )}
+          </div>
+          {/* Status */}
+          <div className="border border-accent bg-surface-light shadow-lg shadow-black/40 text-accent px-3 py-1 rounded-full flex flex-row items-center gap-2">
+            <div className="w-2 h-2 bg-accent rounded-full" />
+            {project.status}
+          </div>
         </div>
       </div>
       {/* Title */}

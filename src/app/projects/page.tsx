@@ -29,7 +29,7 @@ const Projects = () => {
       title: "Secgra SaaS Platform",
       subtitle: "Enterprise-Grade Web Application",
       description:
-        "Leading frontend architecture for a scalable SaaS platform serving multiple enterprise clients with responsive, high-performance interfaces.",
+        "A scalable enterprise SaaS platform where I lead major frontend initiatives, build core components, and implement cross-system integrations used by multiple enterprise clients. Responsible for long-term development, UI/UX consistency, and feature delivery across the application.",
       techStack: [
         "Next.js",
         "TypeScript",
@@ -38,49 +38,51 @@ const Projects = () => {
         "RESTful APIs",
       ],
       features: [
-        "Server-side rendering with Next.js for optimal performance",
-        "Type-safe development with comprehensive TypeScript integration",
-        "Responsive design system using Tailwind CSS utilities",
-        "Seamless backend integration through Python APIs",
-        "Cross-functional Agile development collaboration",
+        "Developed reusable, scalable component architecture (tables, forms, graphs, charts, modals, dynamic layouts)",
+        "Led major UI/UX redesigns to improve responsiveness, accessibility, and visual consistency",
+        "Implemented multi-theme support including full dark mode system",
+        "Created data visualizations and interactive graph structures backed by real API data",
+        "Integrated complex backend services via Python APIs with seamless frontend communication",
       ],
       impact: [
-        { label: "Active Duration", value: "12+ Months" },
-        { label: "Scale", value: "Enterprise" },
+        { label: "Active Duration", value: "Almost 2 Years (Ongoing)" },
+        { label: "Scale", value: "Enterprise Multi-Tenant SaaS" },
         { label: "Uptime", value: "99.9%" },
       ],
       status: "live",
       category: "professional",
       timeline: "Jan 2024 - Present",
       challenges: [
-        "Architecting scalable frontend components for multiple client deployments",
-        "Implementing consistent design patterns across complex user workflows",
-        "Optimizing performance for enterprise-level traffic and data loads",
+        "Transforming legacy UI into reusable and maintainable components",
+        "Maintaining strict design uniformity across dozens of pages and modules",
+        "Handling large-scale data loads while keeping UI performance smooth",
+        "Managing multiple third-party integrations with both frontend and backend requirements",
       ],
       outcomes: [
-        "Successfully deployed production-ready SaaS application",
-        "Established reusable component library for rapid feature development",
-        "Achieved seamless integration with backend services and APIs",
+        "Built and maintained core component library ensuring consistent UX across the entire platform",
+        "Redesigned multiple pages and flows to match the Secgra design environment",
+        "Implemented integrations with Salesforce, Odoo, Palo Alto, DockerHub, Okta, and Microsoft 365",
+        "Created PDF reporting features, custom graphs, and performance-optimized visual dashboards",
       ],
     },
     {
       id: "caffeine",
-      title: "Caffeine Solutions Optimization",
-      subtitle: "International Client Performance Enhancement",
+      title: "Caffeine Solutions Website Optimization & QA",
+      subtitle: "International Client Frontend Performance Enhancement",
       description:
-        "Complete website optimization project for Singapore-based client, focusing on performance, mobile responsiveness, and user experience improvements.",
+        "Spearheaded the frontend optimization and quality assurance (QA) for a Singapore-based client's production WordPress website. The primary focus was resolving critical mobile responsiveness failures and numerous visual layout bugs, resulting in significant improvements to performance and overall user experience.",
       techStack: [
         "WordPress",
-        "PHP",
+        "CSS/SASS",
+        "Responsive Design",
+        "Debugging & QA",
         "Performance Optimization",
-        "Mobile Responsive",
       ],
       features: [
-        "Comprehensive site performance audit and optimization",
-        "Mobile-first responsive design implementation",
-        "Database optimization and query performance tuning",
-        "Advanced caching strategies and CDN integration",
-        "SEO enhancements and technical improvements",
+        "Executed a rigorous frontend QA audit to identify and resolve numerous layout and styling bugs, including unexpected dividers and broken alignments.",
+        "Implemented precise CSS corrections to fix severe mobile rendering issues such as text/image overlapping, unreadable text, and stretched assets.",
+        "Enhanced the mobile-first responsive design to ensure pixel-perfect consistency across all viewports.",
+        "Conducted comprehensive site performance audits and optimization (e.g., caching, compression) to boost core web vitals.",
       ],
       impact: [
         { label: "Speed Boost", value: "65%" },
@@ -91,53 +93,53 @@ const Projects = () => {
       category: "professional",
       timeline: "2024",
       challenges: [
-        "Optimizing legacy WordPress codebase without breaking functionality",
-        "Achieving cross-device compatibility for international audience",
-        "Balancing performance improvements with existing design requirements",
+        "Diagnosing and rectifying critical mobile-specific rendering bugs across a complex, production WordPress codebase.",
+        "Optimizing legacy code without introducing regressions or breaking existing functionality.",
+        "Achieving flawless cross-device and cross-browser compatibility for an international client.",
       ],
       outcomes: [
-        "Delivered 65% improvement in page load speeds",
-        "Achieved excellent mobile performance scores",
-        "Enhanced user experience across all device types",
+        "Successfully resolved all critical mobile layout bugs, restoring the site's proper functionality and visual design on all devices.",
+        "Delivered a 65% improvement in overall page load speeds, directly contributing to better user retention.",
+        "Achieved excellent Google PageSpeed Insights mobile scores, validating the technical improvements.",
       ],
     },
     {
       id: "memorial",
-      title: "Memorial Park Management System",
-      subtitle: "Award-Winning Web & Mobile Application",
+      title: "Memorial Park Information Management System",
+      subtitle: "Top 3 Award-Winning Cross-Platform Application",
       description:
-        "Top 3 capstone project featuring comprehensive memorial park information management through innovative technology and real-time data synchronization.",
+        "Developed an award-winning (Top 3 Best Capstone) Information Management System for La Hermosa Resources and Development Corporation. This cross-platform (Web & Mobile) application centralized critical operational functions, including plot reservation, acquisition, inventory, and other core management tasks, utilizing real-time data synchronization.",
       techStack: [
-        "Flutter",
-        "Dart",
-        "Firebase",
-        "Mobile Development",
+        "Flutter/Dart",
+        "Google Firebase",
+        "Cross-Platform Development",
         "Real-time Database",
+        "System Design",
       ],
       features: [
-        "Cross-platform mobile application (iOS & Android)",
-        "Real-time database synchronization with Google Firebase",
-        "Advanced search and filtering for memorial plot data",
-        "Offline functionality with automatic data sync",
-        "Secure authentication and role-based access control",
+        "Full-stack implementation of core business logic for plot reservation and acquisition.",
+        "Created a reservation and inventory management system to track plot status and availability[cite: 16].",
+        "Cross-platform mobile and web application development using Flutter/Dart[cite: 18].",
+        "Real-time database synchronization via Google Firebase for up-to-the-minute operational data[cite: 19].",
+        "Advanced search and filtering capabilities for comprehensive memorial plot data.",
       ],
       impact: [
-        { label: "Recognition", value: "Top 3" },
-        { label: "Platform", value: "Cross-Platform" },
-        { label: "Database", value: "Real-time" },
+        { label: "Recognition", value: "Top 3 Best Capstone" },
+        { label: "Platform", value: "Cross-Platform (Web & Mobile)" },
+        { label: "Business Functions", value: "Reservation & Inventory" },
       ],
       status: "completed",
       category: "academic",
       timeline: "June 2023",
       challenges: [
-        "Designing intuitive mobile interface for complex data management",
-        "Implementing offline-first architecture with seamless sync",
-        "Creating scalable database structure for memorial park operations",
+        "Designing a cohesive, unified system architecture to handle multiple complex business operations (reservation, acquisition, inventory).",
+        "Implementing secure, role-based access control for different user types within the management team.",
+        "Managing real-time state and synchronization across web and mobile platforms using Firebase.",
       ],
       outcomes: [
-        "Recognized as Top 3 Best Capstone Project",
-        "Demonstrated innovation in mobile application development",
-        "Created practical solution for real-world memorial park management",
+        "Successfully delivered a functional, full-scale system and was recognized as the Top 3 Best Capstone Project.",
+        "Provided the client with a practical, digital solution for streamlining plot reservation and management.",
+        "Demonstrated mastery of Flutter, Dart, and Firebase for developing scalable, real-time applications.",
       ],
     },
   ];
@@ -146,16 +148,13 @@ const Projects = () => {
       <div className="flex flex-col gap-10 items-center justify-center p-5 w-full h-full lg:max-w-[75vw] lg:p-0 2xl:max-w-[60vw]">
         <h1 className="text-4xl md:text-4xl font-bold text-text text-center leading-normal">
           Project
-          <span className="text-accent">
-            {" "}
-            Laboratory
-          </span>
+          <span className="text-accent"> Laboratory</span>
         </h1>
         <div className="w-full mt-10">
-            <MainWidgets projects={projects}/>
+          <MainWidgets projects={projects} />
         </div>
         <div className="flex w-full">
-          <CommandBox/>
+          <CommandBox />
         </div>
       </div>
     </div>

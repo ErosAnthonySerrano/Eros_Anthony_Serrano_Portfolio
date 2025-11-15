@@ -1,11 +1,34 @@
 "use client";
-import React, { useState } from "react";
+import { AiOutlineClose } from "react-icons/ai"; 
+import { BiTerminal } from "react-icons/bi";
+import React, { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 
 const CommandBox = () => {
   const [commandInput, setCommandInput] = useState("");
   const [commandOutput, setCommandOutput] = React.useState<React.ReactNode>("");
   const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  // Auto-focus input when modal opens
+  useEffect(() => {
+    if (isOpen && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isOpen]);
+
+  // Close on Escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsOpen(false);
+      }
+    };
+    
+    document.addEventListener('keydown', handleEscape);
+    return () => document.removeEventListener('keydown', handleEscape);
+  }, []);
 
   const commands: Record<string, React.ReactNode | (() => void)> = {
     help: (
@@ -1101,28 +1124,88 @@ const CommandBox = () => {
   };
 
   return (
-    <div className="rounded-2xl p-px animate-rotate-border bg-conic/[from_var(--border-angle)] from-surface via-accent to-surface from-80% via-98% to-100% shadow-lg shadow-black/40  w-full max-w-full overflow-hidden  z-10">
-      <div className="bg-gradient-to-b from-surface to-surface-dark  rounded-2xl p-3 w-full max-w-full overflow-hidden">
-        <div className="flex items-center mb-2 w-full min-w-0">
-          <span className="text-accent mr-2 text-shadow-lg text-shadow-black/30 animate-pulse flex-shrink-0">
-            $
-          </span>
-          <input
-            type="text"
-            value={commandInput}
-            onChange={(e) => setCommandInput(e.target.value)}
-            onKeyPress={handleKeyPress}
-            placeholder="Type here! Start with 'help' to see what I can do."
-            className="bg-transparent border-none outline-none text-accent font-mono text-sm flex-1 placeholder-accent-dark caret-accent min-w-0"
-          />
-        </div>
-        {commandOutput && (
-          <ul className="text-subtle text-sm whitespace-pre-wrap mt-3 border-t border-gray-600 pt-3 overflow-hidden break-words">
-            {commandOutput}
-          </ul>
-        )}
+  <>
+      {/* FAB Button */}
+      <div className="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full p-[2px] animate-rotate-border bg-conic/[from_var(--border-angle)] from-surface via-accent to-surface from-80% via-98% to-100%">
+        <button
+          onClick={() => setIsOpen(true)}
+          className=" bg-surface text-subtle hover:text-accent h-full w-full cursor-pointer rounded-full border border-border shadow-lg shadow-black/40 hover:shadow-xl hover:shadow-black/50 transition-all duration-300 hover:scale-110 flex items-center justify-center group"
+          aria-label="Open command palette"
+        >
+          <BiTerminal className="w-7 h-7  group-hover:scale-110 transition-transform drop-shadow-md drop-shadow-black" />
+        </button>
       </div>
-    </div>
+
+      {/* Modal Overlay */}
+      {isOpen && (
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 bg-black/60 z-[60] animate-in fade-in duration-200"
+            onClick={() => setIsOpen(false)}
+          />
+
+          {/* Modal */}
+          <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[70] w-[90%] max-w-2xl animate-in fade-in zoom-in-95 duration-200">
+            {/* Animated Border */}
+            <div className="rounded-2xl p-px animate-rotate-border bg-conic/[from_var(--border-angle)] from-surface via-accent to-surface from-80% via-98% to-100% shadow-2xl shadow-black/50">
+              {/* Inner Container */}
+              <div className="bg-gradient-to-b from-surface to-surface-dark rounded-2xl overflow-hidden">
+                {/* Header */}
+                <div className="flex items-center justify-between px-6 py-4 border-b border-accent/20">
+                  <div className="flex items-center gap-3">
+                    <BiTerminal  className="w-5 h-5 text-accent animate-pulse" />
+                    <h3 className="text-lg font-semibold text-accent font-mono">
+                      Command Palette
+                    </h3>
+                  </div>
+                  <button
+                    onClick={() => setIsOpen(false)}
+                    className="text-subtle hover:text-accent transition-colors"
+                    aria-label="Close"
+                  >
+                    <AiOutlineClose className="w-5 h-5" />
+                  </button>
+                </div>
+
+                {/* Command Input Section */}
+                <div className="p-6">
+                  <div className="flex items-center mb-2 w-full min-w-0">
+                    <span className="text-accent mr-2 text-shadow-lg text-shadow-black/30 animate-pulse flex-shrink-0">
+                      $
+                    </span>
+                    <input
+                      ref={inputRef}
+                      type="text"
+                      value={commandInput}
+                      onChange={(e) => setCommandInput(e.target.value)}
+                      onKeyPress={handleKeyPress}
+                      placeholder="Type here! Start with 'help' to see what I can do."
+                      className="bg-transparent border-none outline-none text-accent font-mono text-sm flex-1 placeholder-accent-dark caret-accent min-w-0"
+                    />
+                  </div>
+                  
+                  {/* Command Output */}
+                  {commandOutput && (
+                    <div className="text-subtle text-sm whitespace-pre-wrap mt-3 border-t border-accent/20 pt-3 overflow-hidden break-words">
+                      {commandOutput}
+                    </div>
+                  )}
+
+                  {/* Help text */}
+                  <div className="mt-6 pt-4 border-t border-accent/10">
+                    <p className="text-sm text-subtle">
+                      <span className="text-accent font-semibold">Tip:</span>{' '}
+                      Press <kbd className="px-2 py-1 bg-surface-dark rounded text-xs border border-accent/20">ESC</kbd> to close
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+    </>
   );
 };
 
